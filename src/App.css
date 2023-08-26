@@ -22,12 +22,13 @@ body{
     align-items: center;
     gap:40px;
 }
-#name{
-   height:20px;
-}
 img{
     height:40px;
 }
+#name{
+   height:20px;
+}
+
 .search{
     display:flex;
     align-items: center;
@@ -54,7 +55,6 @@ input{
     font-weight: 600;
 }
 input::placeholder{
-    
     color:#808080
 }
 .btn{
@@ -157,10 +157,13 @@ input::placeholder{
     justify-content: space-between;
     padding:20px 30px;
 }
-.full_banner_section span{
+.full_banner_section .desc{
     font-size: 14px;
-    overflow: hidden;
+    overflow: scroll;
     text-overflow: ellipsis;
+}
+.desc::-webkit-scrollbar{
+   display: none;
 }
 .banner1{
     display:flex;
@@ -168,6 +171,10 @@ input::placeholder{
     align-items: center;
     justify-content: space-between;
   
+}
+.title p{
+   font-size: 26px;
+   font-weight: 600;
 }
 .title{
     display:flex;
@@ -195,5 +202,108 @@ input::placeholder{
     border:1px solid white;
 }
 
+@media(max-width:480px){
+    .nav{
+        padding:10px ;
+        gap:15px;
+    }
+    #name{
+        display: none;
+    }
+    img{
+        height:25px;
+    }
+    .search{
+        gap:10px;
+    }
+    .searchbar{
+        gap:5px;
+    }
+    input{
+        width:130px;
+    }
+    .btn{
+        padding: 8px 9px ;
+    }
+    .icons img{
+        display:none;
+    }
+    .second_section{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+    .first_section{
+        flex-direction: column;
+        align-items: center;
+        gap:40px;
+    }
+    .full_banner{
+        margin:50px 20px;
+        gap:10px;
+        height:320px;
+        align-items: center;
+    }
+    .full_banner img{
+        width:150px;
+        height:220px;
+    }
+    .full_banner_section{
+        align-items: flex-start;
+        padding:10px 20px;
+        gap:5px;
+    }
+    .full_banner_section .desc{
+        height:150px;
+       overflow: scroll;
+    }
+
+    .full_banner_section span{
+        font-size: 10px;
+        text-overflow: clip;
+    }
+    .banner1{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+    }
+    .banner1 >p{
+        font-size: 8px;
+        align-self: end;
+    }
+    .title{
+        display:flex;
+        flex-direction: column;
+    }
+    .title p{
+        font-size: 10px;
+    }
+    
+    .title h4{
+        font-size: 8px;
+    }
+
+    .title{
+        display:flex;
+        flex-direction: column;
+       align-items: flex-start;
+       gap:10px;
+    }
+    .details{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+     }
+    
+    .details h3{
+        font-size: 10px;
+    }
+    .stretch{
+       display: none;
+    }
+    .buttons button{
+        font-size: 8px;
+        padding:5px 10px;
+    }
+}
 
 

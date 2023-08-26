@@ -90,19 +90,19 @@ const Section = ({ title, clicked, setClicked }) => {
                         </div>
                     </div>
                 ))) : (
-                        <div className="full_banner" >
+                        <div className="full_banner">
                             <div className="banner_image">
-                            <img src={selectBook.volumeInfo.imageLinks.thumbnail} alt="" />
+                              <img src={selectBook.volumeInfo.imageLinks.thumbnail} alt="" />
                             </div>
                             <div className="full_banner_section">
                                 <div className="banner1">
                                     <div className="title">
-                                        <h2>{selectBook.volumeInfo.title}</h2>
+                                        <p>{selectBook.volumeInfo.title}</p>
                                         <h4>{selectBook.volumeInfo.authors[0]}</h4>
                                     </div>
                                     <p>Published On : {selectBook.volumeInfo.publishedDate}</p>      
                                 </div>
-                                <span>{selectBook.volumeInfo.description}</span>
+                                <div className="desc"><span>{selectBook.volumeInfo.description}</span></div>
                                 <div className="details">
                                     <h3>Avg Rating : {selectBook.volumeInfo.averageRating}</h3>
                                     <RxDividerVertical className="stretch"/>
@@ -114,7 +114,7 @@ const Section = ({ title, clicked, setClicked }) => {
                                 </div>
                                 <div className="buttons">
                                     <button onClick={() => handleReadNow(selectBook.volumeInfo.previewLink)}> Read Now! </button>
-                                    <button onClick={() => handleReadNow(selectBook.volumeInfo.infoLink)}> More Info ! </button>
+                                    <button onClick={() => handleMoreInfo(selectBook.volumeInfo.infoLink)}> More Info ! </button>
                                 </div>
                             </div>
                         </div>
